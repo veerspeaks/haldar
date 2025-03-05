@@ -166,7 +166,8 @@ const HeroSection = () => {
                     style={{ 
                       animation: 'fadeOut 0.6s ease-out forwards',
                       fontFamily: "'Hanken Grotesk', sans-serif",
-                      fontWeight: 400
+                      fontWeight: 400,
+                      letterSpacing: "0.10em"
                     }}
                   >
                     {cardsData[prevIndex].longDescription}
@@ -180,7 +181,8 @@ const HeroSection = () => {
                     animation: isTransitioning ? 'fadeIn 0.6s ease-out forwards' : 'none',
                     opacity: isTransitioning ? 0 : 1,
                     fontFamily: "'Hanken Grotesk', sans-serif",
-                    fontWeight: 400
+                    fontWeight: 400,
+                    letterSpacing: "0.10em"
                   }}
                 >
                   {cardsData[activeIndex].longDescription}
@@ -192,7 +194,7 @@ const HeroSection = () => {
                 {/* Outgoing button */}
                 {isTransitioning && prevIndex !== null && (
                   <button 
-                    className={`absolute text-white px-8 py-3 rounded-md font-medium transition-all duration-300 transform hover:scale-105 ${cardsData[prevIndex].buttonColor} hover:${cardsData[prevIndex].buttonHoverColor}`}
+                    className={`absolute text-white px-8 py-3 mt-8 rounded-md font-medium transition-all duration-300 transform hover:scale-105 ${cardsData[prevIndex].buttonColor} hover:${cardsData[prevIndex].buttonHoverColor}`}
                     style={{ 
                       animation: 'fadeOut 0.6s ease-out forwards',
                       fontFamily: "'Hanken Grotesk', sans-serif",
@@ -205,7 +207,7 @@ const HeroSection = () => {
                 
                 {/* Current button */}
                 <button 
-                  className={`absolute text-white px-8 py-3 rounded-md font-medium transition-all duration-300 transform hover:scale-105 ${cardsData[activeIndex].buttonColor} hover:${cardsData[activeIndex].buttonHoverColor}`}
+                  className={`absolute text-white px-8 py-3 mt-8 rounded-md font-medium transition-all duration-300 transform hover:scale-105 ${cardsData[activeIndex].buttonColor} hover:${cardsData[activeIndex].buttonHoverColor}`}
                   style={{ 
                     animation: isTransitioning ? 'fadeIn 0.6s ease-out forwards' : 'none',
                     opacity: isTransitioning ? 0 : 1,
